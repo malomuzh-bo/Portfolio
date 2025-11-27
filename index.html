@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="uk" class="dark scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bohdan Malomuzh - Portfolio</title>
-    
+    <meta name="description"
+        content="Portfolio of Bohdan Malomuzh - IT Developer & Marketer. Expertise in React, .NET, Marketing Strategy and E-commerce.">
+    <meta property="og:title" content="Bohdan Malomuzh - Portfolio">
+    <meta property="og:description" content="IT Developer & Marketer. I build products and help them sell.">
+    <meta property="og:image" content="посилання_на_твоє_фото.jpg">
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <script>
@@ -35,17 +40,20 @@
         ::-webkit-scrollbar {
             width: 8px;
         }
+
         ::-webkit-scrollbar-track {
-            background: transparent; 
+            background: transparent;
         }
+
         ::-webkit-scrollbar-thumb {
-            background: #8b5cf6; 
+            background: #8b5cf6;
             border-radius: 4px;
         }
+
         ::-webkit-scrollbar-thumb:hover {
-            background: #6d28d9; 
+            background: #6d28d9;
         }
-        
+
         /* Glass Effect Logic for Light/Dark */
         .glass-panel {
             backdrop-filter: blur(12px);
@@ -62,17 +70,18 @@
         /* Light Mode Glass - clean, subtle shadows */
         html:not(.dark) .glass-panel {
             background: rgba(255, 255, 255, 0.7);
-            border: 1px solid rgba(139, 92, 246, 0.1); 
+            border: 1px solid rgba(139, 92, 246, 0.1);
             box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
         }
-        
+
         .card-hover {
             transition: all 0.3s ease;
         }
+
         .card-hover:hover {
             transform: translateY(-5px);
         }
-        
+
         /* Dark mode hover effect */
         html.dark .card-hover:hover {
             border-color: rgba(139, 92, 246, 0.5);
@@ -86,28 +95,46 @@
         }
     </style>
 </head>
-<body class="bg-light-gradient dark:bg-dark-gradient min-h-screen font-sans transition-colors duration-500 text-slate-800 dark:text-gray-200 selection:bg-purple-500 selection:text-white">
+
+<body
+    class="bg-light-gradient dark:bg-dark-gradient min-h-screen font-sans transition-colors duration-500 text-slate-800 dark:text-gray-200 selection:bg-purple-500 selection:text-white">
 
     <div class="fixed top-0 left-0 right-0 h-1.5 z-[70] bg-gray-200/20 dark:bg-white/5 backdrop-blur-sm">
-        <div id="progress-bar" class="h-full bg-gradient-to-r from-purple-900 to-pink-500 shadow-[0_0_10px_rgba(168,85,247,0.5)] w-0 transition-all duration-100 ease-out"></div>
+        <div id="progress-bar"
+            class="h-full bg-gradient-to-r from-purple-900 to-pink-500 shadow-[0_0_10px_rgba(168,85,247,0.5)] w-0 transition-all duration-100 ease-out">
+        </div>
     </div>
 
-    <nav class="fixed w-full z-50 top-0 bg-white/80 dark:bg-black/80 backdrop-blur-md border-b border-gray-200 dark:border-white/10 transition-colors duration-500 mt-1.5">
+    <nav
+        class="fixed w-full z-50 top-0 bg-white/80 dark:bg-black/80 backdrop-blur-md border-b border-gray-200 dark:border-white/10 transition-colors duration-500 mt-1.5">
         <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-            <div class="text-2xl font-bold tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600 dark:from-purple-400 dark:to-pink-500 cursor-pointer">
+            <div
+                class="block text-2xl font-bold tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600 dark:from-purple-400 dark:to-pink-500 cursor-pointer">
                 <a href="#">BM.</a>
             </div>
-            
+
             <div class="flex items-center gap-4 md:gap-6">
-                <div class="flex gap-2 text-sm font-medium text-gray-600 dark:text-gray-400">
-                    <button onclick="setLanguage('ua')" class="hover:text-purple-600 dark:hover:text-purple-400 transition-colors lang-btn" id="btn-ua">UA</button>
+                <a href="https://drive.google.com/file/d/1AHR41dTQiUghQuGsZJuGY18Uq3in-gOo/view?usp=sharing" download
+                    class="flex items-center gap-2 text-sm font-medium text-purple-600 dark:text-purple-400 hover:text-purple-800 dark:hover:text-purple-200 transition-colors mr-2">
+                    <i class="fa-solid fa-file-arrow-down"></i> <span>CV</span>
+                </a>
+
+                <div class="flex gap-1 md:gap-2 text-sm font-medium text-gray-600 dark:text-gray-400">
+                    <button onclick="setLanguage('ua')"
+                        class="p-1 hover:text-purple-600 dark:hover:text-purple-400 transition-colors lang-btn"
+                        id="btn-ua">UA</button>
                     <span class="opacity-30">|</span>
-                    <button onclick="setLanguage('en')" class="hover:text-purple-600 dark:hover:text-purple-400 transition-colors lang-btn" id="btn-en">EN</button>
+                    <button onclick="setLanguage('en')"
+                        class="p-1 hover:text-purple-600 dark:hover:text-purple-400 transition-colors lang-btn"
+                        id="btn-en">EN</button>
                     <span class="opacity-30">|</span>
-                    <button onclick="setLanguage('pl')" class="hover:text-purple-600 dark:hover:text-purple-400 transition-colors lang-btn" id="btn-pl">PL</button>
+                    <button onclick="setLanguage('pl')"
+                        class="p-1 hover:text-purple-600 dark:hover:text-purple-400 transition-colors lang-btn"
+                        id="btn-pl">PL</button>
                 </div>
 
-                <button onclick="toggleTheme()" class="w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 bg-gray-100 text-orange-500 hover:bg-gray-200 dark:bg-white/10 dark:text-yellow-300 dark:hover:bg-white/20 focus:outline-none ring-2 ring-transparent focus:ring-purple-500">
+                <button onclick="toggleTheme()"
+                    class="w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 bg-gray-100 text-orange-500 hover:bg-gray-200 dark:bg-white/10 dark:text-yellow-300 dark:hover:bg-white/20 focus:outline-none ring-2 ring-transparent focus:ring-purple-500">
                     <i class="fa-solid fa-sun text-xl block dark:hidden"></i>
                     <i class="fa-solid fa-moon text-lg hidden dark:block"></i>
                 </button>
@@ -115,26 +142,34 @@
         </div>
     </nav>
 
-    <header class="pt-36 pb-20 px-4 transition-colors duration-500">
+    <header class="pt-24 md:pt-36 pb-20 px-4 transition-colors duration-500">
         <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-10">
-            
-            <div class="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-white/50 dark:border-purple-900/50 shadow-2xl shadow-purple-200 dark:shadow-none flex-shrink-0 relative bg-gray-200 dark:bg-gray-800 flex items-center justify-center group transition-all duration-500">
+
+            <div
+                class="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-white/50 dark:border-purple-900/50 shadow-2xl shadow-purple-200 dark:shadow-none flex-shrink-0 relative bg-gray-200 dark:bg-gray-800 flex items-center justify-center group transition-all duration-500">
                 <!-- <i class="fa-solid fa-user text-6xl text-gray-400 dark:text-gray-600"></i> -->
-                    <img src="https://media.licdn.com/dms/image/v2/D4D03AQEtzQTNh0hx-Q/profile-displayphoto-crop_800_800/B4DZnx90deGQAI-/0/1760701155980?e=1765411200&v=beta&t=FvCzK9B5tA3IyX__Wi7lUy8O-iJNOzXB0PA6OTAuGrA" alt="my image">
-                </div>
+                <img src="https://media.licdn.com/dms/image/v2/D4D03AQEtzQTNh0hx-Q/profile-displayphoto-crop_800_800/B4DZnx90deGQAI-/0/1760701155980?e=1765411200&v=beta&t=FvCzK9B5tA3IyX__Wi7lUy8O-iJNOzXB0PA6OTAuGrA"
+                    alt="my image">
+            </div>
 
             <div class="text-center md:text-left">
-                <h1 class="text-4xl md:text-6xl font-bold mb-4 text-gray-900 dark:text-white transition-colors duration-300" data-i18n="name">Богдан Маломуж</h1>
-                <h2 class="text-xl md:text-2xl text-purple-600 dark:text-purple-300 mb-6 font-medium" data-i18n="role">IT Розробник & Маркетолог</h2>
-                <p class="text-gray-600 dark:text-gray-400 max-w-xl mb-8 text-lg leading-relaxed transition-colors duration-300" data-i18n="hero_desc">
-                    Поєдную технічну експертизу в розробці з стратегічним мисленням у маркетингу. Створюю продукти та допомагаю їм продаватись.
+                <h1 class="text-4xl md:text-6xl font-bold mb-4 text-gray-900 dark:text-white transition-colors duration-300"
+                    data-i18n="name">Богдан Маломуж</h1>
+                <h2 class="text-xl md:text-2xl text-purple-600 dark:text-purple-300 mb-6 font-medium" data-i18n="role">
+                    IT Розробник & Маркетолог</h2>
+                <p class="text-gray-600 dark:text-gray-400 max-w-xl mb-8 text-lg leading-relaxed transition-colors duration-300"
+                    data-i18n="hero_desc">
+                    Поєдную технічну експертизу в розробці з стратегічним мисленням у маркетингу. Створюю продукти та
+                    допомагаю їм продаватись.
                 </p>
-                
+
                 <div class="flex flex-wrap gap-4 justify-center md:justify-start">
-                    <a href="#it" class="px-6 py-3 bg-purple-600 hover:bg-purple-700 dark:bg-purple-700 dark:hover:bg-purple-600 text-white rounded-lg font-semibold transition-all shadow-lg shadow-purple-500/30 dark:shadow-purple-900/50 flex items-center gap-2">
+                    <a href="#it"
+                        class="px-6 py-3 bg-purple-600 hover:bg-purple-700 dark:bg-purple-700 dark:hover:bg-purple-600 text-white rounded-lg font-semibold transition-all shadow-lg shadow-purple-500/30 dark:shadow-purple-900/50 flex items-center gap-2">
                         <i class="fa-solid fa-code"></i> <span data-i18n="btn_it">IT Проєкти</span>
                     </a>
-                    <a href="#marketing" class="px-6 py-3 border border-purple-600/30 hover:bg-purple-50 dark:border-purple-500/30 dark:hover:bg-purple-500/10 text-purple-700 dark:text-purple-200 rounded-lg font-semibold transition-all flex items-center gap-2">
+                    <a href="#marketing"
+                        class="px-6 py-3 border border-purple-600/30 hover:bg-purple-50 dark:border-purple-500/30 dark:hover:bg-purple-500/10 text-purple-700 dark:text-purple-200 rounded-lg font-semibold transition-all flex items-center gap-2">
                         <i class="fa-solid fa-chart-line"></i> <span data-i18n="btn_marketing">Маркетинг</span>
                     </a>
                 </div>
@@ -142,115 +177,311 @@
         </div>
     </header>
 
-    <main class="max-w-6xl mx-auto px-4 py-10 space-y-24">
-
+    <main class="max-w-6xl mx-auto px-4 py-10 space-y-32">
         <section id="it" class="scroll-mt-32">
-            <div class="flex items-center gap-4 mb-8">
-                <h2 class="text-3xl font-bold text-gray-800 dark:text-white transition-colors" data-i18n="sec_it_title">IT Досвід та Проєкти</h2>
+            <div class="flex items-center gap-4 mb-10">
+                <h2 class="text-3xl font-bold text-gray-800 dark:text-white transition-colors" data-i18n="sec_it_title">
+                    IT Досвід та Проєкти</h2>
                 <div class="h-px bg-gradient-to-r from-purple-600 to-transparent flex-grow opacity-50"></div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                
-                <div class="glass-panel p-6 rounded-xl card-hover group">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="glass-panel p-6 rounded-2xl card-hover group flex flex-col h-full">
                     <div class="flex justify-between items-start mb-4">
-                        <div class="p-3 bg-blue-100 dark:bg-blue-900/20 rounded-lg text-blue-600 dark:text-blue-400 transition-colors">
+                        <div
+                            class="p-3 bg-blue-100 dark:bg-blue-900/20 rounded-xl text-blue-600 dark:text-blue-400 transition-colors">
                             <i class="fa-brands fa-react text-2xl"></i>
                         </div>
-                        <a href="https://github.com/malomuzh-bo/WeatherApp-React-NextJs-" target="_blank" class="text-gray-400 hover:text-purple-600 dark:text-gray-500 dark:hover:text-white transition-colors">
+                        <a href="https://github.com/malomuzh-bo/WeatherApp-React-NextJs-" target="_blank"
+                            class="text-gray-400 hover:text-purple-600 dark:text-gray-500 dark:hover:text-white transition-colors">
                             <i class="fa-brands fa-github text-xl"></i>
                         </a>
                     </div>
-                    <h3 class="text-xl font-bold mb-2 text-gray-800 dark:text-white transition-colors">Weather App</h3>
-                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-4 transition-colors" data-i18n="proj_weather_desc">
-                        Застосунок для прогнозу погоди, розроблений на React JS. Робота з API, асинхронні запити та адаптивний інтерфейс.
+                    <h3 class="text-xl font-bold mb-3 text-gray-800 dark:text-white transition-colors">Weather App</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-6 flex-grow transition-colors leading-relaxed"
+                        data-i18n="proj_weather_desc">
+                        Застосунок для прогнозу погоди.
                     </p>
-                    <div class="flex gap-2 text-xs font-mono text-blue-600 dark:text-blue-300">
-                        <span class="bg-blue-50 dark:bg-blue-900/30 border border-blue-100 dark:border-transparent px-2 py-1 rounded transition-colors">React</span>
-                        <span class="bg-blue-50 dark:bg-blue-900/30 border border-blue-100 dark:border-transparent px-2 py-1 rounded transition-colors">Next.js</span>
-                        <span class="bg-blue-50 dark:bg-blue-900/30 border border-blue-100 dark:border-transparent px-2 py-1 rounded transition-colors">API</span>
+                    <div class="flex flex-wrap gap-2 text-xs font-mono text-blue-600 dark:text-blue-300">
+                        <span class="bg-blue-50 dark:bg-blue-900/30 px-2 py-1 rounded transition-colors">React</span>
+                        <span
+                            class="bg-blue-50 dark:bg-blue-900/30 px-2 py-1 rounded transition-colors">JavaScript</span>
+                        <span class="bg-blue-50 dark:bg-blue-900/30 px-2 py-1 rounded transition-colors">HTML/CSS</span>
                     </div>
                 </div>
 
-                <div class="glass-panel p-6 rounded-xl card-hover group">
+                <div class="glass-panel p-6 rounded-2xl card-hover group flex flex-col h-full">
                     <div class="flex justify-between items-start mb-4">
-                        <div class="p-3 bg-green-100 dark:bg-green-900/20 rounded-lg text-green-600 dark:text-green-400 transition-colors">
+                        <div
+                            class="p-3 bg-green-100 dark:bg-green-900/20 rounded-xl text-green-600 dark:text-green-400 transition-colors">
                             <i class="fa-solid fa-shield-halved text-2xl"></i>
                         </div>
-                        <a href="https://github.com/malomuzh-bo/necst_project" target="_blank" class="text-gray-400 hover:text-purple-600 dark:text-gray-500 dark:hover:text-white transition-colors">
+                        <a href="https://github.com/malomuzh-bo/necst_project" target="_blank"
+                            class="text-gray-400 hover:text-purple-600 dark:text-gray-500 dark:hover:text-white transition-colors">
                             <i class="fa-brands fa-github text-xl"></i>
                         </a>
                     </div>
-                    <h3 class="text-xl font-bold mb-2 text-gray-800 dark:text-white transition-colors">Necst Manager <span class="text-xs bg-purple-600 text-white px-1 rounded ml-2">AI Inside</span></h3>
-                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-4 transition-colors" data-i18n="proj_necst_desc">
-                        Менеджер паролів з інтеграцією AI. Використання C# ASP.NET та LLM для аналізу безпеки або генерації даних.
+                    <h3 class="text-xl font-bold mb-3 text-gray-800 dark:text-white transition-colors">Necst Manager
+                        <span
+                            class="text-[10px] align-top bg-purple-600 text-white px-1.5 py-0.5 rounded ml-1">AI</span>
+                    </h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-6 flex-grow transition-colors leading-relaxed"
+                        data-i18n="proj_necst_desc">
+                        Менеджер паролів з використанням AI.
                     </p>
-                    <div class="flex gap-2 text-xs font-mono text-green-600 dark:text-green-300">
-                        <span class="bg-green-50 dark:bg-green-900/30 border border-green-100 dark:border-transparent px-2 py-1 rounded transition-colors">C# ASP.NET</span>
-                        <span class="bg-green-50 dark:bg-green-900/30 border border-green-100 dark:border-transparent px-2 py-1 rounded transition-colors">AI/LLM</span>
+                    <div class="flex flex-wrap gap-2 text-xs font-mono text-green-600 dark:text-green-300">
+                        <span class="bg-green-50 dark:bg-green-900/30 px-2 py-1 rounded transition-colors">C#</span>
+                        <span class="bg-green-50 dark:bg-green-900/30 px-2 py-1 rounded transition-colors">OpenAI</span>
+                        <span
+                            class="bg-green-50 dark:bg-green-900/30 px-2 py-1 rounded transition-colors">ASP.NET</span>
+                        <span class="bg-green-50 dark:bg-green-900/30 px-2 py-1 rounded transition-colors">Gemini</span>
                     </div>
                 </div>
 
-                <div class="glass-panel p-6 rounded-xl card-hover group">
+                <div class="glass-panel p-6 rounded-2xl card-hover group flex flex-col h-full">
                     <div class="flex justify-between items-start mb-4">
-                        <div class="p-3 bg-red-100 dark:bg-red-900/20 rounded-lg text-red-600 dark:text-red-400 transition-colors">
+                        <div
+                            class="p-3 bg-red-100 dark:bg-red-900/20 rounded-xl text-red-600 dark:text-red-400 transition-colors">
                             <i class="fa-brands fa-unity text-2xl"></i>
                         </div>
                     </div>
-                    <h3 class="text-xl font-bold mb-2 text-gray-800 dark:text-white transition-colors">Pacman 3D</h3>
-                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-4 transition-colors" data-i18n="proj_pacman_desc">
-                        Класична гра у новому вимірі. Розробка на Unity, робота з 3D моделями, фізикою та логікою ворогів.
+                    <h3 class="text-xl font-bold mb-3 text-gray-800 dark:text-white transition-colors">Pacman 3D</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-6 flex-grow transition-colors leading-relaxed"
+                        data-i18n="proj_pacman_desc">
+                        Класична гра у 3D.
                     </p>
-                    <div class="flex gap-2 text-xs font-mono text-red-600 dark:text-red-300">
-                        <span class="bg-red-50 dark:bg-red-900/30 border border-red-100 dark:border-transparent px-2 py-1 rounded transition-colors">Unity</span>
-                        <span class="bg-red-50 dark:bg-red-900/30 border border-red-100 dark:border-transparent px-2 py-1 rounded transition-colors">C#</span>
-                        <span class="bg-red-50 dark:bg-red-900/30 border border-red-100 dark:border-transparent px-2 py-1 rounded transition-colors">Gamedev</span>
+                    <div class="flex flex-wrap gap-2 text-xs font-mono text-red-600 dark:text-red-300">
+                        <span class="bg-red-50 dark:bg-red-900/30 px-2 py-1 rounded transition-colors">Unity</span>
+                        <span class="bg-red-50 dark:bg-red-900/30 px-2 py-1 rounded transition-colors">C#</span>
                     </div>
                 </div>
-
             </div>
-            
-            <div class="mt-8 flex flex-wrap gap-3 justify-center md:justify-start opacity-70">
-                <span class="px-3 py-1 border border-gray-400 dark:border-gray-700 text-gray-600 dark:text-gray-400 rounded-full text-sm transition-colors">HTML5/CSS3</span>
-                <span class="px-3 py-1 border border-gray-400 dark:border-gray-700 text-gray-600 dark:text-gray-400 rounded-full text-sm transition-colors">Tailwind</span>
-                <span class="px-3 py-1 border border-gray-400 dark:border-gray-700 text-gray-600 dark:text-gray-400 rounded-full text-sm transition-colors">MySQL</span>
-                <span class="px-3 py-1 border border-gray-400 dark:border-gray-700 text-gray-600 dark:text-gray-400 rounded-full text-sm transition-colors">Figma</span>
-                <span class="px-3 py-1 border border-gray-400 dark:border-gray-700 text-gray-600 dark:text-gray-400 rounded-full text-sm transition-colors">Azure</span>
+        </section>
+
+        <section class="grid md:grid-cols-2 gap-10 md:gap-16">
+
+            <div>
+                <h3
+                    class="text-2xl font-bold mb-8 flex items-center gap-3 text-gray-800 dark:text-white transition-colors">
+                    <span
+                        class="w-10 h-10 rounded-lg bg-indigo-100 dark:bg-indigo-900/30 flex items-center justify-center text-indigo-600 dark:text-indigo-400">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </span>
+                    <span data-i18n="edu_title">Освіта</span>
+                </h3>
+
+                <div class="relative border-l-2 border-purple-200 dark:border-purple-900/50 ml-5 space-y-10 pl-8 py-2">
+                    <div class="relative">
+                        <span
+                            class="absolute -left-[41px] top-1 w-5 h-5 rounded-full border-4 border-white dark:border-gray-900 bg-purple-600"></span>
+                        <h4 class="text-lg font-bold text-gray-800 dark:text-white transition-colors"
+                            data-i18n="university_name">Civitas University
+                        </h4>
+                        <p class="text-purple-600 dark:text-purple-400 text-sm font-medium mb-1" data-i18n="edu_1_role">
+                            New Media & Marketing</p>
+                        <p class="text-gray-500 text-xs mb-2" data-i18n="edu_where_when">Warsaw | 2023 - Present</p>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed" data-i18n="edu_1_desc">
+                            Спеціалізація на нових медіа, рекламі та маркетингу в міжнародних
+                            відносинах.
+                        </p>
+                    </div>
+                    <div class="relative">
+                        <span
+                            class="absolute -left-[41px] top-1 w-5 h-5 rounded-full border-4 border-white dark:border-gray-900 bg-gray-400 dark:bg-gray-600"></span>
+                        <h4 class="text-lg font-bold text-gray-800 dark:text-white transition-colors">ITStep Academy
+                        </h4>
+                        <p class="text-purple-600 dark:text-purple-400 text-sm font-medium mb-1" data-i18n="edu_2_role">
+                            Computer Science Fundamentals</p>
+                        <p class="text-gray-500 text-xs mb-2">Ukraine</p>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed" data-i18n="edu_2_desc">
+                            Вивчення ООП (C#, JavaScript, Java), баз даних та хмарних технологій Azure.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h3
+                    class="text-2xl font-bold mb-8 flex items-center gap-3 text-gray-800 dark:text-white transition-colors">
+                    <span
+                        class="w-10 h-10 rounded-lg bg-pink-100 dark:bg-pink-900/30 flex items-center justify-center text-pink-600 dark:text-pink-400">
+                        <i class="fa-solid fa-language"></i>
+                    </span>
+                    <span data-i18n="lang_title">Мови</span>
+                </h3>
+
+                <div class="glass-panel p-8 rounded-2xl space-y-6">
+                    <div>
+                        <div class="flex justify-between mb-2 text-sm">
+                            <span class="font-bold text-gray-700 dark:text-gray-200"
+                                data-i18n="lang_ua">Українська</span>
+                            <span class="text-purple-600 dark:text-purple-400">Native</span>
+                        </div>
+                        <div class="h-2 w-full bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+                            <div class="h-full bg-gradient-to-r from-purple-500 to-pink-500 w-full"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-2 text-sm">
+                            <span class="font-bold text-gray-700 dark:text-gray-200"
+                                data-i18n="lang_en">Англійська</span>
+                            <span class="text-purple-600 dark:text-purple-400">B2 (Upper Intermediate)</span>
+                        </div>
+                        <div class="h-2 w-full bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+                            <div class="h-full bg-gradient-to-r from-purple-500 to-pink-500 w-[71%]"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-2 text-sm">
+                            <span class="font-bold text-gray-700 dark:text-gray-200" data-i18n="lang_pl">Польська</span>
+                            <span class="text-purple-600 dark:text-purple-400">B2 (Upper Intermediate)</span>
+                        </div>
+                        <div class="h-2 w-full bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+                            <div class="h-full bg-gradient-to-r from-purple-500 to-pink-500 w-[75%]"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-2 text-sm">
+                            <span class="font-bold text-gray-700 dark:text-gray-200"
+                                data-i18n="lang_it">Італійська</span>
+                            <span class="text-gray-400 dark:text-gray-500">A1 (Learning)</span>
+                        </div>
+                        <div class="h-2 w-full bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+                            <div class="h-full bg-purple-500 w-[15%]"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
         <section id="marketing" class="scroll-mt-32">
-            <div class="flex items-center gap-4 mb-8">
+            <div class="flex items-center gap-4 mb-10">
                 <div class="h-px bg-gradient-to-l from-purple-600 to-transparent flex-grow opacity-50"></div>
-                <h2 class="text-3xl font-bold text-gray-800 dark:text-white transition-colors" data-i18n="sec_mark_title">Маркетинг та E-Commerce</h2>
+                <h2 class="text-3xl font-bold text-gray-800 dark:text-white transition-colors"
+                    data-i18n="sec_mark_title">Маркетинг та E-Commerce</h2>
             </div>
 
-            <div class="glass-panel p-8 rounded-2xl border-l-4 border-purple-500">
-                <div class="flex flex-col md:flex-row gap-8">
+            <div class="glass-panel p-8 md:p-10 rounded-3xl border-l-4 border-purple-500 relative overflow-hidden">
+                <div
+                    class="absolute top-0 right-0 w-64 h-64 bg-purple-500/5 rounded-full blur-3xl -z-10 pointer-events-none">
+                </div>
+
+                <div class="flex flex-col md:flex-row gap-10">
                     <div class="md:w-1/3">
-                        <h3 class="text-2xl font-bold mb-2 text-gray-800 dark:text-white transition-colors">TopMen</h3>
-                        <p class="text-purple-600 dark:text-purple-400 font-medium mb-4 transition-colors" data-i18n="mark_role">Product Manager / E-commerce</p>
-                        <ul class="space-y-2 text-gray-600 dark:text-gray-300 text-sm transition-colors">
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-500"></i> SWOT Analysis</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-500"></i> Copywriting</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-500"></i> Marketplaces</li>
+                        <h3 class="text-3xl font-bold mb-2 text-gray-800 dark:text-white transition-colors">TopMen</h3>
+                        <p class="text-purple-600 dark:text-purple-400 font-medium mb-6 transition-colors"
+                            data-i18n="mark_role">Product Manager / E-commerce</p>
+
+                        <div class="mb-8">
+                            <p class="text-xs text-gray-400 uppercase tracking-widest mb-4" data-i18n="brands_title">
+                                Brands I worked with:
+                            </p>
+
+                            <div class="flex flex-wrap gap-8 items-center text-gray-400 dark:text-gray-500">
+
+                                <svg class="h-8 md:h-10 w-auto fill-current hover:text-gray-900 dark:hover:text-white transition-colors duration-300"
+                                    viewBox="135.5 361.38 1000 356.39" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M245.8075 717.62406c-29.79588-1.1837-54.1734-9.3368-73.23459-24.4796-3.63775-2.8928-12.30611-11.5663-15.21427-15.2245-7.72958-9.7193-12.98467-19.1785-16.48977-29.6734-10.7857-32.3061-5.23469-74.6989 15.87753-121.2243 18.0765-39.8316 45.96932-79.3366 94.63252-134.0508 7.16836-8.0511 28.51526-31.5969 28.65302-31.5969.051 0-1.11225 2.0153-2.57652 4.4694-12.65304 21.1938-23.47957 46.158-29.37751 67.7703-9.47448 34.6785-8.33163 64.4387 3.34693 87.5151 8.05611 15.898 21.86731 29.6684 37.3979 37.2806 27.18874 13.3214 66.9948 14.4235 115.60699 3.2245 3.34694-.7755 169.19363-44.801 368.55048-97.8366 199.35686-53.0408 362.49439-96.4029 362.51989-96.3672.056.046-463.16259 198.2599-703.62654 301.0914-38.08158 16.2806-48.26521 20.3928-66.16827 26.6785-45.76525 16.0714-86.76008 23.7398-119.89779 22.4235z" />
+                                </svg>
+
+                                <svg class="h-8 md:h-10 w-auto fill-current hover:text-gray-900 dark:hover:text-white transition-colors duration-300"
+                                    viewBox="0 0 1000 593.2" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="m734.6 593.1-275.9-479.4 198.1-113.8 342.9 593.1h-265.3" />
+                                    <path d="m-0.00246 526 198.1-114.6 104.8 181.8h-264.6l-38.45-67.16" />
+                                    <path d="m232.2 322.5 198.1-114.3 222.2 385-263.7-0.256-156.7-270.4" />
+                                </svg>
+
+                                <svg class="h-8 md:h-10 w-auto fill-current hover:text-gray-900 dark:hover:text-white transition-colors duration-300"
+                                    viewBox="0 0 1000 461.5" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M359.9 142.7h-29.6V25.2h-42.9V0h115.4v25.2h-42.9V142.7z M443 78.7v64h-29.6V0h29.6v54.1h55.3V0h29.7v142.7h-29.7V78.7H443z M568.2 25.2h74.5V0H540.6v142.7h102.1v-25.2H568.2V80.5h65.7V55.2H568.2V25.2z M87.9 157.3h27.7v142.7H86L28.1 198.3h-0.4v101.7H0V157.3h31.2l56.3 99.3h0.5v-99.3H87.9z M235.8 228.6c0 39.9-22.5 49.9-38.5 49.9-16 0-38.5-10-38.5-49.9s22.6-49.9 38.5-49.9C213.3 178.7 235.8 188.6 235.8 228.6z M265.5 228.6c0-67-49.4-75.1-68.2-75.1-18.7 0-68.2 8.2-68.2 75.1 0 66.9 49.5 75.1 68.2 75.1C216.1 303.7 265.5 295.6 265.5 228.6z M474.6 300h-29.6V182.5h-42.9v-25.2h115.4v25.2h-42.8V300z M557.7 300v-63.9h55.3V300h29.7V157.3h-29.7v54h-55.3v-54h-29.6v142.7h29.6V300z M341.7 220.1c15.4 0 22.9-5.4 22.9-19.5 0-7.5-3.4-18.6-20.8-18.6H307v38.1h34.7z M277.8 157.3h71.8c37.7 0 44.6 28 44.6 40.4 0 15.7-8 29.2-22 34 11.7 5.1 18 9.5 18 36.1 0 20.8 0 26 6.3 28.4v3.8h-32.8c-1.9-6.7-3.1-14.1-3.1-28.8 0-19.5-1.2-27-23.2-27h-30.6v55.8h-29.1V157.3z M190.2 457.3h29.6v-59.9h62.4v-25.3h-62.4V340h71.3v-25.2H190.2V457.3z M322.3 403.2h36.1l-17.6-56.4h-0.3L322.3 403.2z M304.5 457.3h-31.2l50.6-142.6h34.2l50 142.6h-32.2l-9.1-29.4h-52.3l-9.9 29.4V457.3z M467.7 337.2c24.4 0 29 16.1 31.4 24.6h29.6c-1.6-21-18.7-50.4-61.2-50.4-36.7 0-65.3 25.5-65.3 75.3 0 49.3 27.1 74.9 64.8 74.9 35.6 0 55.7-21.6 61.6-52.6h-29.6c-3.5 17.5-15 26.8-31.4 26.8-25.1 0-35.2-23.1-35.2-48.7C432.4 346.7 453.4 337.2 467.7 337.2z M642.7 339.9H568.2v30h65.7v25.2H568.2v37h74.5v25.2H540.6V314.6h102.1v25.2V339.9z M671.1 0C852.9 0 1000 147.9 1000 330.6V457.3H863.9V334.1c-1.3-106-87-191.4-192.8-191.4h-6.5V0H671.1z M671.1 314.6h-6.5v142.6h68.1v-80.8C732.7 342.3 705.1 314.6 671.1 314.6z M671.3 157.3c98.2 0.1 177.6 79.8 178.1 178.4v121.5H747.2v-80.8c0-42.3-34.1-76.5-76.1-76.5h-6.5V157.3H671.3z" />
+                                </svg>
+
+                            </div>
+                        </div>
+
+                        <ul class="space-y-3 text-gray-600 dark:text-gray-300 text-sm transition-colors">
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-check text-green-500"></i>
+                                <span data-i18n="skill_6">SWOT Analysis & Strategy</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-check text-green-500"></i>
+                                <span data-i18n="skill_7">SEO Copywriting</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-check text-green-500"></i>
+                                <span data-i18n="skill_8">Marketplaces (Prom)</span>
+                            </li>
                         </ul>
                     </div>
-                    
-                    <div class="md:w-2/3 border-t md:border-t-0 md:border-l border-gray-300 dark:border-gray-700 pt-6 md:pt-0 md:pl-8 transition-colors">
-                        <h4 class="text-lg font-bold text-gray-800 dark:text-white mb-3 transition-colors" data-i18n="case_title">Кейс: Оптимізація продажів брендового одягу</h4>
-                        <p class="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed transition-colors" data-i18n="case_desc">
-                            Робота з преміум брендами (Adidas, Nike, Puma). Створення унікальних описів товарів та візуального контенту, що підвищило конверсію.
+
+                    <div
+                        class="md:w-2/3 border-t md:border-t-0 md:border-l border-gray-200 dark:border-white/10 pt-8 md:pt-0 md:pl-10 transition-colors">
+                        <h4 class="text-xl font-bold text-gray-800 dark:text-white mb-4 transition-colors"
+                            data-i18n="case_title">
+                            Кейс: Оптимізація продажів
+                        </h4>
+                        <p class="text-gray-600 dark:text-gray-400 mb-8 leading-relaxed text-base"
+                            data-i18n="case_desc">
+                            Робота з преміум брендами. Створення унікальних описів та візуального контенту.
                         </p>
-                        
-                        <div class="grid grid-cols-2 gap-4">
-                            <div class="bg-purple-50 dark:bg-black/20 p-4 rounded-lg text-center transition-colors">
-                                <span class="block text-2xl font-bold text-purple-600 dark:text-purple-400">~50</span>
-                                <span class="text-xs text-gray-500 uppercase tracking-wider" data-i18n="stat_online">Продажів/тиждень (Online)</span>
+
+                        <div class="grid grid-cols-2 gap-4 md:gap-6">
+
+                            <div
+                                class="bg-white/50 dark:bg-black/20 p-5 rounded-2xl text-center transition-all duration-300 border border-gray-100 dark:border-white/5 hover:border-purple-200 dark:hover:border-purple-800/50 group relative">
+
+                                <div
+                                    class="absolute -top-3 left-1/2 -translate-x-1/2 bg-green-100 dark:bg-green-900/60 text-green-700 dark:text-green-300 text-[10px] font-bold px-2 py-0.5 rounded-full border border-green-200 dark:border-green-800 opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none flex items-center shadow-sm">
+                                    <i class="fa-solid fa-arrow-trend-up mr-1"></i>
+                                    <span data-i18n="badge_growth">+230% Growth</span>
+                                </div>
+
+                                <div class="flex items-center justify-center gap-2 md:gap-3 mb-2 mt-1">
+                                    <div
+                                        class="flex flex-col items-center opacity-50 grayscale transition-all duration-300 group-hover:grayscale-0 group-hover:opacity-100">
+                                        <span
+                                            class="text-lg md:text-xl font-bold text-gray-500 dark:text-gray-400">15</span>
+                                    </div>
+
+                                    <i
+                                        class="fa-solid fa-arrow-right-long text-gray-300 dark:text-gray-600 text-sm"></i>
+
+                                    <span
+                                        class="block text-3xl md:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-pink-600 dark:from-purple-400 dark:to-pink-400">~50</span>
+                                </div>
+
+                                <span class="text-[10px] md:text-xs text-gray-500 uppercase tracking-wider font-bold"
+                                    data-i18n="stat_online">Online Sales / Week</span>
                             </div>
-                            <div class="bg-purple-50 dark:bg-black/20 p-4 rounded-lg text-center transition-colors">
-                                <span class="block text-2xl font-bold text-purple-600 dark:text-purple-400">~200</span>
-                                <span class="text-xs text-gray-500 uppercase tracking-wider" data-i18n="stat_offline">Продажів/тиждень (Offline)</span>
+
+                            <div
+                                class="bg-white/50 dark:bg-black/20 p-5 rounded-2xl text-center transition-all duration-300 border border-gray-100 dark:border-white/5 hover:border-purple-200 dark:hover:border-purple-800/50 group relative">
+
+                                <div
+                                    class="absolute -top-3 left-1/2 -translate-x-1/2 bg-blue-100 dark:bg-blue-900/60 text-blue-700 dark:text-blue-300 text-[10px] font-bold px-2 py-0.5 rounded-full border border-blue-200 dark:border-blue-800 opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none flex items-center shadow-sm">
+                                    <i class="fa-solid fa-rocket mr-1"></i>
+                                    <span data-i18n="badge_store">Successful Launch</span>
+                                </div>
+
+                                <div class="flex items-center justify-center gap-2 md:gap-3 mb-2 mt-1">
+                                    <div
+                                        class="flex flex-col items-center opacity-50 grayscale transition-all duration-300 group-hover:grayscale-0 group-hover:opacity-100">
+                                        <span
+                                            class="text-lg md:text-xl font-bold text-gray-500 dark:text-gray-400">0</span>
+                                    </div>
+
+                                    <i
+                                        class="fa-solid fa-arrow-right-long text-gray-300 dark:text-gray-600 text-sm"></i>
+
+                                    <span
+                                        class="block text-3xl md:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-pink-600 dark:from-purple-400 dark:to-pink-400">~200</span>
+                                </div>
+
+                                <span class="text-[10px] md:text-xs text-gray-500 uppercase tracking-wider font-bold"
+                                    data-i18n="stat_offline">Offline Sales / Week</span>
                             </div>
                         </div>
                     </div>
@@ -260,33 +491,68 @@
 
         <section class="grid md:grid-cols-2 gap-8">
             <div class="glass-panel p-8 rounded-2xl">
-                <h3 class="text-xl font-bold mb-4 flex items-center gap-2 text-gray-800 dark:text-white transition-colors">
-                    <i class="fa-solid fa-brain text-purple-500"></i> <span data-i18n="soft_skills_title">Soft Skills & Якості</span>
+                <h3
+                    class="text-xl font-bold mb-6 flex items-center gap-3 text-gray-800 dark:text-white transition-colors">
+                    <i class="fa-solid fa-users-gear text-purple-500"></i> <span data-i18n="soft_skills_title">Soft
+                        Skills & Background</span>
                 </h3>
+
+                <div class="mb-6">
+                    <p class="text-sm text-gray-600 dark:text-gray-400 italic mb-3 leading-relaxed"
+                        data-i18n="soft_desc_horeca">
+                        "Досвід у HoReCa (Domino's, NYX Hotel) навчив мене стресостійкості та роботі в
+                        команді."
+                    </p>
+                </div>
+
                 <div class="flex flex-wrap gap-2">
-                    <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 rounded-md text-sm text-purple-800 dark:text-purple-200 transition-colors" data-i18n="skill_1">Швидке навчання</span>
-                    <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 rounded-md text-sm text-purple-800 dark:text-purple-200 transition-colors" data-i18n="skill_2">Комунікація з клієнтами</span>
-                    <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 rounded-md text-sm text-purple-800 dark:text-purple-200 transition-colors" data-i18n="skill_3">Адаптивність</span>
-                    <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 rounded-md text-sm text-purple-800 dark:text-purple-200 transition-colors" data-i18n="skill_4">Відповідальність</span>
+                    <span
+                        class="px-3 py-1.5 bg-purple-100 dark:bg-purple-900/30 rounded-lg text-sm font-medium text-purple-800 dark:text-purple-200 transition-colors"
+                        data-i18n="skill_1">Швидке навчання</span>
+                    <span
+                        class="px-3 py-1.5 bg-purple-100 dark:bg-purple-900/30 rounded-lg text-sm font-medium text-purple-800 dark:text-purple-200 transition-colors"
+                        data-i18n="skill_2">Комунікація</span>
+                    <span
+                        class="px-3 py-1.5 bg-purple-100 dark:bg-purple-900/30 rounded-lg text-sm font-medium text-purple-800 dark:text-purple-200 transition-colors"
+                        data-i18n="skill_3">Адаптивність</span>
+                    <span
+                        class="px-3 py-1.5 bg-purple-100 dark:bg-purple-900/30 rounded-lg text-sm font-medium text-purple-800 dark:text-purple-200 transition-colors"
+                        data-i18n="skill_4">Відповідальність</span>
+                    <span
+                        class="px-3 py-1.5 bg-green-100 dark:bg-green-900/30 rounded-lg text-sm font-medium text-green-800 dark:text-green-200 transition-colors"
+                        data-i18n="skill_5">Стресостійкість<span>
                 </div>
             </div>
 
             <div class="glass-panel p-8 rounded-2xl">
-                <h3 class="text-xl font-bold mb-4 flex items-center gap-2 text-gray-800 dark:text-white transition-colors">
-                    <i class="fa-solid fa-lightbulb text-yellow-500"></i> <span data-i18n="interests_title">Інтереси</span>
+                <h3
+                    class="text-xl font-bold mb-6 flex items-center gap-3 text-gray-800 dark:text-white transition-colors">
+                    <i class="fa-solid fa-lightbulb text-yellow-500"></i> <span
+                        data-i18n="interests_title">Інтереси</span>
                 </h3>
-                <ul class="space-y-3 text-gray-600 dark:text-gray-400 text-sm transition-colors">
-                    <li class="flex gap-3">
-                        <span class="w-1.5 h-1.5 rounded-full bg-purple-500 mt-2 shrink-0"></span>
-                        <span data-i18n="interest_1">Дослідження аудіо метаматеріалів та їх структури.</span>
+                <ul class="space-y-4 text-gray-600 dark:text-gray-400 text-sm transition-colors">
+                    <li class="flex gap-4 group">
+                        <span
+                            class="w-8 h-8 rounded-full bg-purple-100 dark:bg-purple-900/50 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-wave-square text-purple-600"></i>
+                        </span>
+                        <div>
+                            <span class="block font-bold text-gray-800 dark:text-gray-200 mb-0.5"
+                                data-i18n="interest_meta_title">Метаматеріали</span>
+                            <span class="italic text-purple-600 dark:text-purple-400"
+                                data-i18n="interest_meta_slogan">"Тут відбувається магія"</span>
+                        </div>
                     </li>
-                    <li class="flex gap-3">
-                        <span class="w-1.5 h-1.5 rounded-full bg-purple-500 mt-2 shrink-0"></span>
-                        <span data-i18n="interest_2">Автомобільна інженерія: двигуни, комплектації, технічні нюанси.</span>
-                    </li>
-                    <li class="flex gap-3">
-                        <span class="w-1.5 h-1.5 rounded-full bg-purple-500 mt-2 shrink-0"></span>
-                        <span data-i18n="interest_3">Підприємництво та побудова бізнес-процесів.</span>
+                    <li class="flex gap-4 group">
+                        <span
+                            class="w-8 h-8 rounded-full bg-orange-100 dark:bg-orange-900/50 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-car text-orange-600"></i>
+                        </span>
+                        <div>
+                            <span class="block font-bold text-gray-800 dark:text-gray-200 mb-0.5"
+                                data-i18n="interest_auto_title">Автомобільна інженерія</span>
+                            <span data-i18n="interest_auto_desc">Двигуни та технічні нюанси.</span>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -294,26 +560,34 @@
 
     </main>
 
-    <footer class="bg-white dark:bg-black/80 border-t border-gray-200 dark:border-white/5 mt-20 py-10 transition-colors duration-500">
+    <footer
+        class="bg-white dark:bg-black/80 border-t border-gray-200 dark:border-white/5 mt-20 py-10 transition-colors duration-500">
         <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6">
             <div class="text-center md:text-left">
-                <h2 class="text-xl font-bold text-gray-800 dark:text-white mb-1 transition-colors" data-i18n="footer_contact">Контакти</h2>
+                <h2 class="text-xl font-bold text-gray-800 dark:text-white mb-1 transition-colors"
+                    data-i18n="footer_contact">Контакти</h2>
                 <p class="text-gray-500 text-sm">Warsaw, Poland</p>
             </div>
 
             <div class="flex flex-col gap-2 text-sm text-gray-600 dark:text-gray-400 transition-colors">
-                <a href="mailto:malomuzh.bo@gmail.com" class="hover:text-purple-600 dark:hover:text-purple-400 transition-colors"><i class="fa-solid fa-envelope w-5"></i> malomuzh.bo@gmail.com</a>
-                <a href="tel:+48786117220" class="hover:text-purple-600 dark:hover:text-purple-400 transition-colors"><i class="fa-solid fa-phone w-5"></i> +48 786 117 220</a>
+                <a href="mailto:malomuzh.bo@gmail.com"
+                    class="hover:text-purple-600 dark:hover:text-purple-400 transition-colors"><i
+                        class="fa-solid fa-envelope w-5"></i> malomuzh.bo@gmail.com</a>
+                <a href="tel:+48786117220" class="hover:text-purple-600 dark:hover:text-purple-400 transition-colors"><i
+                        class="fa-solid fa-phone w-5"></i> +48 786 117 220</a>
             </div>
 
             <div class="flex gap-4">
-                <a href="https://github.com/malomuzh-bo" target="_blank" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center hover:bg-purple-600 hover:text-white dark:hover:bg-purple-700 dark:hover:text-white transition-all text-gray-700 dark:text-gray-300">
+                <a href="https://github.com/malomuzh-bo" target="_blank"
+                    class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center hover:bg-purple-600 hover:text-white dark:hover:bg-purple-700 dark:hover:text-white transition-all text-gray-700 dark:text-gray-300">
                     <i class="fa-brands fa-github text-xl"></i>
                 </a>
-                <a href="https://www.linkedin.com/in/malomuzh-bo" target="_blank" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center hover:bg-blue-600 hover:text-white dark:hover:bg-blue-700 dark:hover:text-white transition-all text-gray-700 dark:text-gray-300">
+                <a href="https://www.linkedin.com/in/malomuzh-bo" target="_blank"
+                    class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center hover:bg-blue-600 hover:text-white dark:hover:bg-blue-700 dark:hover:text-white transition-all text-gray-700 dark:text-gray-300">
                     <i class="fa-brands fa-linkedin-in text-xl"></i>
                 </a>
-                <a href="https://www.facebook.com/profile.php?id=100090396102067" target="_blank" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center hover:bg-blue-500 hover:text-white dark:hover:bg-blue-600 dark:hover:text-white transition-all text-gray-700 dark:text-gray-300">
+                <a href="https://www.facebook.com/profile.php?id=100090396102067" target="_blank"
+                    class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center hover:bg-blue-500 hover:text-white dark:hover:bg-blue-600 dark:hover:text-white transition-all text-gray-700 dark:text-gray-300">
                     <i class="fa-brands fa-facebook-f text-xl"></i>
                 </a>
             </div>
@@ -334,8 +608,8 @@
 
         /* --- THEME TOGGLE LOGIC --- */
         const html = document.documentElement;
-        
-        // Check local storage or system preference on load
+
+        // Перевірка теми при завантаженні
         if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
             html.classList.add('dark');
         } else {
@@ -357,108 +631,197 @@
             ua: {
                 name: "Богдан Маломуж",
                 role: "IT Розробник & Маркетолог",
-                hero_desc: "Поєдную технічну експертизу в розробці з стратегічним мисленням у маркетингу. Створюю продукти та допомагаю їм продаватись. Універсальний фахівець, готовий до складних викликів.",
+                hero_desc: "Поєдную технічну експертизу в розробці з стратегічним мисленням у маркетингу. Створюю продукти та допомагаю їм продаватись.",
                 btn_it: "IT Проєкти",
                 btn_marketing: "Маркетинг",
+
+                // IT Section
                 sec_it_title: "IT Досвід та Проєкти",
-                proj_weather_desc: "Застосунок для прогнозу погоди, розроблений на React JS. Робота з API, асинхронні запити та адаптивний інтерфейс.",
-                proj_necst_desc: "Менеджер паролів з інтеграцією AI. Використання C# ASP.NET та LLM для аналізу безпеки або генерації даних.",
-                proj_pacman_desc: "Класична гра у новому вимірі. Розробка на Unity, робота з 3D моделями, фізикою та логікою ворогів.",
+                proj_weather_desc: "Застосунок для прогнозу погоди (React, JavaScript). Робота з API та адаптивний дизайн.",
+                proj_necst_desc: "Менеджер паролів з використанням AI (C# ASP.NET). Генерація та аналіз безпеки через LLM.",
+                proj_pacman_desc: "3D гра на Unity. Робота з фізикою, моделями та логікою ворогів.",
+
+                // Education & Langs
+                university_name: "Університет Сівітас",
+                edu_where_when: "Варшава | 2023 - дотепер",
+                edu_title: "Освіта",
+                edu_1_role: "Нові медіа та маркетинг",
+                edu_1_desc: "Спеціалізація на маркетингу, рекламі та нових медіа в міжнародних відносинах.",
+                edu_2_role: "Основи інформатики",
+                edu_2_desc: "Основи ООП (C#, JS, Java, Unity, SQL, Git), баз даних та хмарних технологій Azure.",
+
+                lang_title: "Мови",
+                lang_ua: "Українська",
+                lang_en: "Англійська",
+                lang_pl: "Польська",
+                lang_it: "Італійська",
+
+                // Marketing Section
                 sec_mark_title: "Маркетинг та E-Commerce",
                 mark_role: "Product Manager / E-commerce",
-                case_title: "Кейс: Оптимізація продажів брендового одягу",
-                case_desc: "Робота з преміум брендами (Adidas, Nike, Puma). Створення унікальних описів товарів та візуального контенту, що підвищило конверсію.",
-                stat_online: "Продажів/тиждень (Online)",
-                stat_offline: "Продажів/тиждень (Offline)",
-                soft_skills_title: "Soft Skills & Якості",
+                brands_title: "Бренди, з якими я працював:",
+                case_title: "Кейс: Оптимізація продажів",
+                case_desc: "Робота з преміум брендами (Adidas, Nike, Puma). Створення унікальних описів товарів та візуального контенту.",
+                stat_online: "Продажів/тижд (Online)",
+                stat_offline: "Продажів/тижд (Offline)",
+                badge_growth: "+230% Росту",
+                badge_store: "Успішний старт",
+
+                // Soft Skills & Interests
+                soft_skills_title: "Soft Skills & Досвід",
+                soft_desc_horeca: "Досвід роботи в HoReCa (Domino's, NYX Hotel) загартував стресостійкість та вміння працювати в команді.",
                 skill_1: "Швидке навчання",
                 skill_2: "Комунікація",
                 skill_3: "Адаптивність",
                 skill_4: "Відповідальність",
+                skill_5: "Стресостійкість",
+                skill_6: "SWOT Анаітика та Стратегія",
+                skill_7: "SEO Копірайтинг",
+                skill_8: "Маркетплейси (Prom)",
+
                 interests_title: "Інтереси",
-                interest_1: "Дослідження метаматеріалів у сфері аудіо та їх структури.",
-                interest_2: "Автомобільна інженерія: двигуни, комплектації, технічні нюанси.",
-                interest_3: "Підприємництво та побудова бізнес-процесів.",
+                interest_meta_title: "Метаматеріали у сфері аудіо",
+                interest_meta_slogan: "\"Магія трапляється...\"",
+                interest_auto_title: "Автомобільна інженерія",
+                interest_auto_desc: "Двигуни, комплектації, технічні нюанси.",
                 footer_contact: "Контакти"
             },
             en: {
                 name: "Bohdan Malomuzh",
                 role: "IT Developer & Marketer",
-                hero_desc: "Combining technical expertise in development with strategic marketing thinking. I build products and help them sell. A universal specialist ready for complex challenges.",
+                hero_desc: "Combining technical expertise in development with strategic marketing thinking. I build products and help them sell.",
                 btn_it: "IT Projects",
                 btn_marketing: "Marketing",
+
                 sec_it_title: "IT Experience & Projects",
-                proj_weather_desc: "Weather forecast application developed on React JS. API integration, asynchronous requests, and responsive interface.",
-                proj_necst_desc: "Password manager with AI integration. Using C# ASP.NET and LLM for security analysis or data generation.",
-                proj_pacman_desc: "Classic game in a new dimension. Development in Unity, working with 3D models, physics, and enemy logic.",
+                proj_weather_desc: "Weather forecast app (React, JavaScript). API integration and responsive design.",
+                proj_necst_desc: "AI-powered password manager (C# ASP.NET). Security analysis via LLM.",
+                proj_pacman_desc: "3D game in Unity. Working with physics, models, and enemy logic.",
+
+                university_name: "Civitas University",
+                edu_where_when: "Warsaw | 2023 - Present",
+                edu_title: "Education",
+                edu_1_role: "New Media & Marketing",
+                edu_1_desc: "Specializing in marketing, advertising and new media in international relations.",
+                edu_2_role: "Computer Science Fundamentals",
+                edu_2_desc: "OOP Fundamentals (C#, JS, Java, Unity, SQL, Git), databases, and Azure cloud services.",
+
+                lang_title: "Languages",
+                lang_ua: "Ukrainian",
+                lang_en: "English",
+                lang_pl: "Polish",
+                lang_it: "Italian",
+
                 sec_mark_title: "Marketing & E-Commerce",
                 mark_role: "Product Manager / E-commerce",
-                case_title: "Case Study: Brand Sales Optimization",
-                case_desc: "Working with premium brands (Adidas, Nike, Puma). Creating unique product descriptions and visual content that increased conversion rates.",
+                brands_title: "Brands I worked with:",
+                case_title: "Case Study: Sales Optimization",
+                case_desc: "Working with premium brands (Adidas, Nike, Puma). Creating unique descriptions and visual content.",
                 stat_online: "Sales/week (Online)",
                 stat_offline: "Sales/week (Offline)",
-                soft_skills_title: "Soft Skills & Qualities",
+                badge_growth: "+230% Growth",
+                badge_store: "Successful Launch",
+
+                soft_skills_title: "Soft Skills & Background",
+                soft_desc_horeca: "Experience in HoReCa (Domino's, NYX Hotel) taught me stress resistance and teamwork.",
                 skill_1: "Fast Learner",
                 skill_2: "Communication",
                 skill_3: "Adaptability",
                 skill_4: "Responsibility",
+                skill_5: "Stress resistance",
+                skill_6: "SWOT Analysis and Strategy",
+                skill_7: "SEO Copywriting",
+                skill_8: "Marketplaces (Prom)",
+
                 interests_title: "Interests",
-                interest_1: "Researching audio metamaterials and their structure.",
-                interest_2: "Automotive engineering: engines, specs, technical nuances.",
-                interest_3: "Entrepreneurship and business process building.",
+                interest_meta_title: "Audio Metamaterials",
+                interest_meta_slogan: "\"Magic happens...\"",
+                interest_auto_title: "Automotive Engineering",
+                interest_auto_desc: "Engines, specs, and technical nuances.",
                 footer_contact: "Contact Me"
             },
             pl: {
                 name: "Bohdan Malomuzh",
                 role: "Programista IT & Marketer",
-                hero_desc: "Łączę wiedzę techniczną w programowaniu ze strategicznym myśleniem marketingowym. Tworzę produkty i pomagam w ich sprzedaży. Uniwersalny specjalista gotowy na wyzwania.",
+                hero_desc: "Łączę wiedzę techniczną z myśleniem marketingowym. Tworzę produkty i pomagam w ich sprzedaży.",
                 btn_it: "Projekty IT",
                 btn_marketing: "Marketing",
+
                 sec_it_title: "Doświadczenie IT i Projekty",
-                proj_weather_desc: "Aplikacja pogodowa stworzona w React JS. Integracja API, zapytania asynchroniczne i responsywny interfejs.",
-                proj_necst_desc: "Menedżer haseł z integracją AI. Użycie C# ASP.NET i LLM do analizy bezpieczeństwa lub generowania danych.",
-                proj_pacman_desc: "Klasyczna gra w nowym wymiarze. Rozwój w Unity, praca z modelami 3D, fizyką i logiką wrogów.",
+                proj_weather_desc: "Aplikacja pogodowa (React, JavaScript). Integracja API i responsywny design.",
+                proj_necst_desc: "Menedżer haseł oparty na sztucznej inteligencji (C# ASP.NET). Analiza bezpieczeństwa przez LLM.",
+                proj_pacman_desc: "Gra 3D w Unity. Fizyka, modele i logika wrogów.",
+
+                university_name: "Uniwersytet Civitas",
+                edu_where_when: "Warszawa | 2023 - Obecnie",
+                edu_title: "Edukacja",
+                edu_1_role: "Nowe Media i Marketing",
+                edu_1_desc: "Specjalizacja w marketingu, reklamie i nowych mediach w stosunkach międzynarodowych.",
+                edu_2_role: "Podstawy Informatyki",
+                edu_2_desc: "Podstawy OOP (C#, JS, Java, Unity, SQL, Git), bazy danych i chmura Azure.",
+
+                lang_title: "Języki",
+                lang_ua: "Ukraiński",
+                lang_en: "Angielski",
+                lang_pl: "Polski",
+                lang_it: "Włoski",
+
                 sec_mark_title: "Marketing i E-Commerce",
                 mark_role: "Product Manager / E-commerce",
+                brands_title: "Marki, z którymi pracowałem:",
                 case_title: "Case Study: Optymalizacja Sprzedaży",
-                case_desc: "Praca z markami premium (Adidas, Nike, Puma). Tworzenie unikalnych opisów produktów i treści wizualnych, co zwiększyło konwersję.",
+                case_desc: "Praca z markami premium (Adidas, Nike, Puma). Tworzenie unikalnych opisów i treści wizualnych.",
                 stat_online: "Sprzedaż/tydzień (Online)",
                 stat_offline: "Sprzedaż/tydzień (Offline)",
+                badge_growth: "+230% Wzrostu",
+                badge_store: "Udany Start",
+
                 soft_skills_title: "Umiejętności Miękkie",
+                soft_desc_horeca: "Doświadczenie w HoReCa (Domino's, NYX Hotel) nauczyło mnie odporności na stres i pracy zespołowej.",
                 skill_1: "Szybka nauka",
                 skill_2: "Komunikacja",
                 skill_3: "Elastyczność",
                 skill_4: "Odpowiedzialność",
+                skill_5: "Odporność na stres",
+                skill_6: "Analiza SWOT i strategia",
+                skill_7: "SEO Copywriting",
+                skill_8: "Marketplaces (Prom)",
+
                 interests_title: "Zainteresowania",
-                interest_1: "Badanie metamateriałów audio i ich struktury.",
-                interest_2: "Inżynieria samochodowa: silniki, specyfikacje, niuanse techniczne.",
-                interest_3: "Przedsiębiorczość i budowanie procesów biznesowych.",
+                interest_meta_title: "Audio Metamateriały",
+                interest_meta_slogan: "\"Magiczne rzeczy się zdarzają.\"",
+                interest_auto_title: "Inżynieria Samochodowa",
+                interest_auto_desc: "Silniki, specyfikacje i niuanse techniczne.",
                 footer_contact: "Kontakt"
             }
         };
 
         function setLanguage(lang) {
-            // Update active button style
+            localStorage.setItem('language', lang);
+
             document.querySelectorAll('.lang-btn').forEach(btn => {
                 btn.classList.remove('text-purple-600', 'dark:text-purple-400', 'font-bold');
                 btn.classList.add('text-gray-600', 'dark:text-gray-400');
             });
             const activeBtn = document.getElementById(`btn-${lang}`);
-            activeBtn.classList.remove('text-gray-600', 'dark:text-gray-400');
-            activeBtn.classList.add('text-purple-600', 'dark:text-purple-400', 'font-bold');
+            if (activeBtn) {
+                activeBtn.classList.remove('text-gray-600', 'dark:text-gray-400');
+                activeBtn.classList.add('text-purple-600', 'dark:text-purple-400', 'font-bold');
+            }
 
-            // Update text content
             const elements = document.querySelectorAll('[data-i18n]');
             elements.forEach(el => {
                 const key = el.getAttribute('data-i18n');
-                if (translations[lang][key]) {
+                if (translations[lang] && translations[lang][key]) {
                     el.textContent = translations[lang][key];
                 }
             });
         }
 
-        // Initialize default language
-        setLanguage('ua');
+        const savedLang = localStorage.getItem('language') || 'ua';
+        setLanguage(savedLang);
+
     </script>
 </body>
+
 </html>
